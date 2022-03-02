@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows 11</title>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <link rel="stylesheet" href="window.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li onclick="open23()">
+          <div class="start">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div id="over"></div>
+          </div>
+        </li>
+        <li>
+          <a href="https://www.google.co.in"
+            ><img src="img/Google.png" alt=""
+          /></a>
+        </li>
+        <li><img src="img/My Computer.png" alt="" /></li>
+        <li><img src="img/My Documents.png" alt="" /></li>
+        <li><img src="img/Recycle Bin.png" alt="" /></li>
+      </ul>
+    </div>
+    <div id="menu">
+      <div class="input">
+        <ion-icon name="search"></ion-icon>
+        <input type="text" placeholder="Type here to search " />
+      </div>
+      <div id="item">
+        <h4>Pinned</h4>
+        <div class="items">
+          <img src="img/Google.png" alt="" />
+          <img src="img/microsoft.png" alt="" />
+          <img src="img/Gmail.png" alt="" />
+          <img src="img/Facebook.png" alt="" />
+          <img src="img/Music.png" alt="" />
+          <img src="img/My Computer.png" alt="" />
+          <img src="img/My Documents.png" alt="" />
+          <img src="img/Pictures.png" alt="" />
+          <img src="img/Recycle Bin.png" alt="" />
+          <img src="img/77-775763_setting-icon-hd-png-download.png" alt="" />
+          <img src="img/point.png" alt="" />
+          <img src="img/excel.png" alt="" />
+          <!-- <img src="img/power.png" alt="" /> -->
+        </div>
+        <h4 style="margin-top: 20px">Recommended</h4>
+        <div class="items">
+          <img src="img/cmd.png" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+    <script>
+        var height = window.innerHeight;
+        var nav = document.querySelector('.navbar');
+        var start = document.getElementById('over');
+        var menu = document.getElementById('menu');
+        function open23(){
+            menu.classList.toggle('active')
+        }
+        document.addEventListener('mousemove',e=>{
+            var cur = Math.abs(e.clientY)
+            console.log(cur-(height-60))
+          if(e.offsetY>(height-40)){
+              
+            nav.style.bottom = 0+'px';
+          }  
+          else{
+              nav.style.bottom = '-'+43+'px'
+          }
+        })
+    </script> 
+  </body>
+</html>

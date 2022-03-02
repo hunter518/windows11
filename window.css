@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('img/back.jpg') no-repeat;
+    background-size: cover;
+    width: 100vw;
+    max-height: 100vh;
+    position: relative;
+}
+.navbar{  
+    position: fixed;
+    bottom: -42px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(transparent, rgb(26, 25, 25));
+    border-top: 1px solid rgb(26, 25, 25);
+    transition: .7s;
+}
+.navbar ul{
+    list-style: none;  
+}
+.navbar .start{
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    
+    grid-template-columns: auto auto;
+    
+    /* background: white; */
+}
+.navbar ul li{
+  
+    display: inline-block;
+    margin: 0px 5px;
+    transition: .5s;
+}
+.navbar ul li:nth-child(1):hover{
+    transform: none;
+}
+.navbar ul li:hover{
+    transform: scale(1.2);
+}
+.navbar ul li:nth-child(1){
+    margin-right: 35px;
+}
+.navbar ul li img{
+    position: relative;
+    
+    width: 35px;
+    height: 35px;
+}
+.navbar ul li img:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.navbar .start div{
+    display: inline-block;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+}
+.start #over{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(135deg,cyan,rgb(0, 195, 255));
+mix-blend-mode:darken;
+}
+.start #over:hover{
+    cursor: pointer;
+}
+.start #menu{
+    position: absolute;
+    bottom: 40;
+    right: 0;
+}
+#menu{
+    display: inline;
+    visibility: hidden;
+    position: absolute;
+    top: 60px;
+    left: 30%;
+    width: 500px;
+    min-height: 500px;
+    background: rgba(26, 25, 25, 0.486);
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    transition: 1s;
+    opacity: 0;
+}
+#menu.active{
+    visibility: visible;
+    opacity: 1;
+}
+#menu .input{
+    text-align: left;
+    width: 85%;
+    background: rgb(27, 27, 27);
+    border: 1px solid rgb(90, 90, 90);
+    border-bottom: 2px solid skyblue;
+    margin: 5px auto;
+    padding: 8px 20px;
+    border-radius: 8px;
+    display: flex;
+}
+#menu .input input{
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    margin-left: 2px;
+}
+#menu .input ion-icon{
+    font-size: 1.5em;
+    color: white;
+}
+#item{
+    width: 80%;
+    margin: 20px auto;
+}
+#item h4{
+    color: white;
+    margin: 10PX 0PX;
+}
+#item .items{
+display: grid;
+grid-template-columns: auto auto auto auto;
+column-gap: 10px;
+row-gap: 30px;
+}
+#item .items img{
+    width: 40px;
+    transition: .3s;
+}
+#item .items img:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.788);
+}
