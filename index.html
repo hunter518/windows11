@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="window.css" />
   </head>
-  <body onclick="close23()">
+  <body>
     <div class="navbar">
       <ul>
         <li onclick="open23()">
@@ -31,7 +31,7 @@
         <li><img src="img/Recycle Bin.png" alt="" /></li>
       </ul>
     </div>
-    <div id="menu">
+    <div id="menu" onblur="close23()">
       <div class="input">
         <ion-icon name="search"></ion-icon>
         <input type="text" placeholder="Type here to search " />
