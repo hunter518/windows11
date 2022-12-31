@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="window.css" />
   </head>
-  <body>
+  <body onclick="close23()">
     <div class="navbar">
       <ul>
         <li onclick="open23()">
@@ -66,6 +66,9 @@
         var nav = document.querySelector('.navbar');
         var start = document.getElementById('over');
         var menu = document.getElementById('menu');
+        function close23(){
+            menu.classList.remove('active')
+        }
         function open23(){
             menu.classList.toggle('active')
         }
